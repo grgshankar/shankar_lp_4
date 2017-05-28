@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class demo {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter word");
+        String x = sc.nextLine();
+        String result="";
+        for (int i = 0; i < x.length(); i++) {
+        for (int j = i+1; j <= x.length(); j++) {
+           
+            String temp=x.substring(i,j);
+            
+            boolean check=true;
+            for(int k=0;k<temp.length();k++){
+            
+                String c=temp.charAt(k)+"";
+                int count=0;
+                for(int l=0;l<temp.length();l++){
+                if(c.equals(temp.charAt(l)+"")){
+                count=count+1;
+                }
+                }
+                if(count>1){
+                check=false;
+                break;
+                }
+                
+            }
+            
+            if(check){
+              if(temp.length()>result.length()){
+              result=temp;
+              }
+            }
+            
+        }
+    }
+        System.out.println(result+" : "+result.length());
+    }
+}
