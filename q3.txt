@@ -1,0 +1,7 @@
+2 byte means 16 bit
+2 byte number should not be greater thean 65,535
+Soultion;
+a = 60000;
+c = a+b;
+Range of b = 65535/60000 = 5535
+therefore range of b is 0 to 5535
